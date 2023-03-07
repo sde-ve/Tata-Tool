@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div id="upload-list">
+    <h1 style="margin-left: 280px ;margin-top : 50px">UPLOAD EXCEL SHEET </h1>
+        <form action="upload-list" method="post" enctype="multipart/form-data" style="margin-left: 280px;">
+            <div> 
+            <input type="file" name='upload_file' id="upload_file"><br>  
+            </div>
+            <button class="btn red-btn" type="submit" style="margin-left: 10px;">upload
+            </button>       
+        </form>
+    
+        
+    </div>    
+    <div style="margin-left: 280px;" align="center">{{ message }}</div> 
+    
+{% endblock %}    

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="margin-left: 280px ;margin-top : 100px">
+<form action="add-data"  method="POST">
+    <div class="panel">
+        <div class="formbox-policy"> 
+            <h1></h1>        
+             <div class="row">
+                   <div class="col-md-3 col-sm-6">
+                    <div class="form-group">
+                        <input  placeholder="CSE Name" type="text" required pattern="[A-Za-z]{2,50}"  title="enter valid contact Person"   class="form-control" value={{ username }}  name="cse_name">
+                    </div>
+                   </div>
+                 <div class="col-md-3 col-sm-6">
+                     <div class="form-group">
+                      <input  placeholder="Policy No" type="text" required class="form-control" value = "" name="policy_no">
+                   </div>
+                 </div>
+                 <div class="col-md-3 col-sm-6">
+                  <div class="form-group">
+                      <input  placeholder="Pick-Up PIN" type="text" required  class="form-control" value = {{ pincode }}  readonly name="pickup_pin">
+                  </div>
+                 </div>
+                  
+                 <div class="col-md-3 col-sm-6">
+                  <div class="form-group">
+                      <input  placeholder="Pick-up Address" type="text" required class="form-control" value="" name="pickup_address">
+                  </div>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-3 col-sm-6">
+                     <div class="form-group">
+                      <input  placeholder="Contact Person" type="text" required pattern="[A-Za-z]{2,50}"  title="enter valid contact Person"  class="form-control" value="" name="contact_person">
+                   </div>
+                 </div>
+                 <div class="col-md-3 col-sm-6">
+                  <div class="form-group"> 
+                      <input  placeholder="Mobile No" type="text" title="Please enter a 10-digit number" pattern="[0-9]{10}" required class="form-control" value="" name="mobile_no">
+                       
+
+                  </div>
+                 </div>
+               </div>
+             </div>
+        </div>
+<button class="btn red-btn" type="submit">submit
+</button>
+</form>
+<script> 
+    function phoneNumberCheck(mobile_no)
+    {
+       var regEx = "^\+{0,2}([\-\. ])?(\(?\d{0,3}\))?([\-\. ])?\(?\d{0,3}\)?([\-\. ])?\d{3}([\-\. ])?\d{4}";
+       if(phoneNumber.value.match(regEx))
+         {
+          return true;
+         }
+       else
+         {
+         alert("Please enter a valid phone number.");
+         return false;
+         }
+    }    
+    </script>        
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+{% endblock %}

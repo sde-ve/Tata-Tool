@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Login</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/style.css">
+	<link rel="stylesheet" href="../static/css/responsive.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+	<div class="warrper">
+		<div class="login-box">
+			<div class="container-lg">
+				<div class="login-detail">
+					<div class="left-box">
+						<img src="static/images/login-banner.png">
+					</div>
+					<div class="right-box">
+						<div class="right-box-detail">
+							<img src="static/images/logo.png">
+							   
+							<form class="login-form" method="POST" action="/">
+								<div class="form-group">
+									<input name="username" placeholder="Username" type="text" class="form-control" value="">
+								</div>
+								<div class="form-group password-box">
+									<input name="password" placeholder="Password" type="password" autocomplete="current-password" class="form-control" value="" id="id_password">
+									 
+									<h5>  {{ msg }}   </h5>
+								</div>
+								<div class="remind-fogot-box">
+									<div class="check_box">
+										<label class="container">Remember me
+										  <input type="checkbox" checked="checked">
+										  <span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="forgot-link">
+										<a href="#">Forgot Password?</a>
+									</div>
+								</div>
+								<div class="button-box">
+									<button class="btn login-btn red-btn " type="submit">login
+									 <!-- <a href="/" class="btn login-btn red-btn " type="submit">login</a> -->
+									 <!-- <a href="#" class="btn login-btn red-border-btn">Sign up</a> -->
+								</div>
+
+							</form>
+							<div class="copy-rightbox">
+								<p>Copyright ValuEnable © . All Rights Reserved</p>
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#id_password');
+
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+	</script>
+</body>
+</html>
