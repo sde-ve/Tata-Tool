@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>interest waiver</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="stylesheet" href="../static/css/responsive.css">
+</head>
+<body>
+
+<div class="main_page">
+    <div class="container-lg main-inner">
+        <aside class="main-sidebar sidebar-dark-primary">
+            <div class="sidebar">
+                <div class="user-panel">
+                    <nav class="navbox">
+                        
+                        <ul class="navbar-navbox">
+                          <li class="nav-item">
+                            <a class="nav-link" data-widget="pushmenu" href="#">
+                                <img src="static/images/back-arrow.png">
+                            </a>
+                          </li>
+                        </ul>
+                        
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                          <li class="nav-item has-treeview menu-open">
+                             
+                            <a href="/dashboard" class="dashboard nav-link">
+                                {{ username }} 
+                              </a>
+                          </li>
+                          <li class="nav-item has-treeview menu-open">
+                            <a href="pincode" class="dashboard nav-link">
+                               ENTER YOUR PIN
+                              </a>
+                          </li> 
+                          <li class="nav-item has-treeview menu-open">
+                                <a href="pick-up-detail" class="dashboard nav-link">
+                                    CHEQUE REQUEST DETAILS
+                                  </a>
+                              </li>
+                              <li class="nav-item has-treeview menu-open">
+                                <a href= "{{ url_for('generate_excel') }}" class="dashboard nav-link" download>
+                                    DOWNLOAD PICKUP DETAILS
+                                  </a>
+                              </li>
+                              <li class="nav-item has-treeview menu-open">
+                                <a href= "/send-sms" class="dashboard nav-link" >
+                                     SEND SMS
+                                  </a>
+                              </li>
+                              <li class="nav-item has-treeview menu-open">
+                                <a href= "/upload-list" class="dashboard nav-link" >
+                                    UPLOAD SMS DATA 
+                                  </a>
+                              </li>
+                              <li class="nav-item has-treeview menu-open">
+                                <a href= "/logout" class="dashboard nav-link" >
+                                    logout
+                                  </a>
+                              </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </aside>
+          </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+      {% block content %}
+    {% endblock %}
+</body>
+</html>
+ 

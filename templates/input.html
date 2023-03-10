@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+  
+<div class="input_form" style="margin-left: 400px; margin-top: 100px;">
+	
+	<form action="pincode"  method="post">
+		<div class="panel">
+			<div class="formbox-policy"> 
+				<h1></h1>        
+				 <div class="row">
+					<div class="col-md-3 col-sm-6">
+						<div class="form-group">
+							<input  placeholder="ENTER PINCODE" type="text" required class="form-control" value="" name="pin_code">
+							
+						</div>
+					   </div>
+				 </div>
+			</div>
+	<button class="btn red-btn">Check Eligibility
+	</button>
+	<h3> {{ message }} </h3>
+	 
+</form>   
+</div>    
+{% endblock %}
+
+ 
+
+ 
